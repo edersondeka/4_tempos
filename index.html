@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo de Quatro Tempos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Ciclo de Quatro Tempos</h1>
+    <p>Acompanhe a animação dos 4 tempos e entenda o funcionamento do motor.</p>
+
+    <div class="container">
+        <canvas id="animationCanvas"></canvas>
+        <div id="stageIndicator">Etapa: Admissão</div>
+        <div id="colorLegend">
+            <h3>Significado das Cores</h3>
+            <p><span style="color: #22c55e;">■</span> Admissão: Entrada da mistura.</p>
+            <p><span style="color: #3b82f6;">■</span> Compressão: Preparação para combustão.</p>
+            <p><span style="color: #facc15;">■</span> Combustão: Geração de energia.</p>
+            <p><span style="color: #ef4444;">■</span> Exausto: Expulsão dos gases.</p>
+        </div>
+        <div class="buttons">
+            <button onclick="startAnimation()">Iniciar</button>
+            <button onclick="pauseAnimation()">Pausar</button>
+            <button onclick="resetAnimation()">Reiniciar</button>
+        </div>
+    </div>
+
+    <div id="explanation">
+        <h2>Admissão</h2>
+        <p><strong>Pistão:</strong> Desce do topo ao fundo.<br>
+            <strong>Válvulas:</strong> Admissão aberta, escape fechada.<br>
+            <strong>Virabrequim:</strong> Gira de 0° a 180°.<br>
+            <strong>O que acontece:</strong> O motor aspira a mistura de ar e combustível.
+        </p>
+    </div>
+
+    <div id="quiz">
+        <h2>Teste seu Conhecimento</h2>
+        <p>Em qual etapa a válvula de escape está aberta?</p>
+        <select id="quizAnswer">
+            <option value="0">Selecione uma opção</option>
+            <option value="1">Admissão</option>
+            <option value="2">Compressão</option>
+            <option value="3">Combustão</option>
+            <option value="4">Exausto</option>
+        </select>
+        <button onclick="checkAnswer()">Verificar</button>
+        <p id="quizResult"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
